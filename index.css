@@ -1,0 +1,280 @@
+:root {
+    --primary-color: #0099ff;
+    --secondary-color: #f0f4f7;
+    --text-color: #333;
+    --border-radius: 12px;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.exam-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.exam-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.exam-header h1 {
+    color: var(--text-color);
+    font-size: 2.5em;
+    margin: 0 0 15px 0;
+}
+
+.certification-badge {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.exam-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+.info-content h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.1em;
+}
+
+.info-content p {
+    margin: 5px 0 0 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.exam-description {
+    margin-bottom: 30px;
+}
+
+.exam-description h2 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.exam-description p {
+    line-height: 1.6;
+    color: #666;
+}
+
+.exam-description ul, .exam-rules ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.exam-description ul li, .exam-rules ul li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.exam-description ul li:before, .exam-rules ul li:before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.exam-rules {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+}
+
+.exam-rules h3 {
+    color: var(--text-color);
+    margin-top: 0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.start-button, .help-button {
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.start-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.start-button:hover {
+    background: #0077cc;
+    transform: translateY(-2px);
+}
+
+.help-button {
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+}
+
+.help-button:hover {
+    background: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .exam-card {
+        padding: 20px;
+    }
+
+    .exam-info {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .start-button, .help-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Styles untuk halaman bantuan */
+.help-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.help-section, .faq-section {
+    margin-bottom: 40px;
+}
+
+.help-section h2, .faq-section h2 {
+    color: var(--text-color);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.help-item, .faq-item {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.help-item h3, .faq-item h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.help-item ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.help-item ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.faq-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: #666;
+}
+
+.back-button {
+    background: #6c757d;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+/* Responsive styles untuk halaman bantuan */
+@media (max-width: 768px) {
+    .help-item, .faq-item {
+        padding: 15px;
+    }
+
+    .help-section h2, .faq-section h2 {
+        font-size: 1.5em;
+    }
+
+    .help-item h3, .faq-item h3 {
+        font-size: 1.1em;
+    }
+}
